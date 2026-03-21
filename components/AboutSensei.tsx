@@ -2,10 +2,9 @@ import Image from "next/image";
 
 export default function AboutSensei() {
     return (
-        <div className="bg-white w-full">
+        <div className="bg-white w-full" id="sobre-moacir">
             <section
                 className="mx-auto w-full max-w-6xl px-4 py-14 md:px-6 bg-white"
-                id="sobre-moacir"
                 aria-labelledby="about-sensei-heading"
             >
                 <div className="mb-8 text-center">
@@ -56,7 +55,7 @@ export default function AboutSensei() {
                     <div className="grid gap-8 md:grid-cols-2">
                         <div className="rounded-xl border border-gray-200 p-6">
                             <h4 className="mb-4 text-lg font-semibold text-black text-center">
-                                Judô
+                                Judo
                             </h4>
                             <ul className="list-disc space-y-2 pl-5 text-sm text-black md:text-base">
                                 <li>Cinturón negro desde 1997</li>

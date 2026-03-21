@@ -4,9 +4,11 @@ import { useState } from "react";
 
 const links = [
   { href: "#", label: "Inicio" },
-  { href: "#pases-y-entradas", label: "Pases y Entradas" },
+  { href: "#sobre-moacir", label: "Sobre Moacir" },
+  { href: "#pases-y-entradas", label: "Entradas" },
   { href: "#preguntas-frecuentes", label: "Preguntas Frecuentes" },
   { href: "#ubicacion", label: "Ubicación" },
+  
 ] as const;
 
 export default function NavBar() {

@@ -31,7 +31,7 @@ export default function PassCard({
     >
       {featured && (
         <span className="mb-4 inline-block rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-700">
-          Popular
+          Más vendido
         </span>
       )}
 
