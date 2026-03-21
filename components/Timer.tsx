@@ -1,0 +1,77 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+/** Fecha y hora del evento (Costa Rica, UTC−6). Ajusta si cambia el horario. */
+const EVENT_AT = new Date("2026-05-13T18:00:00-06:00");
+
+function pad(n: number) {
+  return String(Math.max(0, n)).padStart(2, "0");
+}
+
+export default function Timer() {
+  const [parts, setParts] = useState({ d: 0, h: 0, m: 0 });
+
+  useEffect(() => {
+    const tick = () => {
+      const diff = Math.max(0, EVENT_AT.getTime() - Date.now());
+      const d = Math.floor(diff / 86_400_000);
+      const h = Math.floor((diff % 86_400_000) / 3_600_000);
+      const m = Math.floor((diff % 3_600_000) / 60_000);
+      setParts({ d, h, m });
+    };
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <section
+      aria-label="Cuenta regresiva hasta el evento"
+      className="border-y border-black/10 bg-black/[0.02] py-8 dark:border-white/10 dark:bg-white/[0.03]"
+    >
+      <div className="flex justify-center px-6">
+        <div
+          className="grid max-w-md grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] items-center justify-items-center gap-x-2 gap-y-2"
+          role="timer"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
+            {pad(parts.d)}
+          </span>
+          <span
+            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-neutral-500"
+            aria-hidden
+          >
+            :
+          </span>
+          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
+            {pad(parts.h)}
+          </span>
+          <span
+            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-neutral-500"
+            aria-hidden
+          >
+            :
+          </span>
+          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
+            {pad(parts.m)}
+          </span>
+
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+            días
+          </span>
+          <span aria-hidden className="min-w-0" />
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+            horas
+          </span>
+          <span aria-hidden className="min-w-0" />
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+            minutos
+          </span>
+        </div>
+      </div>
+    </section>
+  );
+}
