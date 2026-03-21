@@ -37,20 +37,20 @@ export default function Timer() {
           aria-live="polite"
           aria-atomic="true"
         >
-          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
+          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-white">
             {pad(parts.d)}
           </span>
           <span
-            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-neutral-500"
+            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-white"
             aria-hidden
           >
             :
           </span>
-          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
+          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-white">
             {pad(parts.h)}
           </span>
           <span
-            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-neutral-500"
+            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-white"
             aria-hidden
           >
             :
@@ -59,15 +59,15 @@ export default function Timer() {
             {pad(parts.m)}
           </span>
 
-          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-white">
             días
           </span>
           <span aria-hidden className="min-w-0" />
-          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-white">
             horas
           </span>
           <span aria-hidden className="min-w-0" />
-          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-neutral-400">
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-white">
             minutos
           </span>
         </div>
