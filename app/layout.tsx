@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Lora, Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const lora = Lora({
   variable: "--font-lora",
@@ -33,6 +34,7 @@ export default function RootLayout({
       className={`dark ${lora.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
+      <Footer />
     </html>
   );
 }
