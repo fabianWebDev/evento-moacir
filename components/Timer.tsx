@@ -10,7 +10,7 @@ function pad(n: number) {
 }
 
 export default function Timer() {
-  const [parts, setParts] = useState({ d: 0, h: 0, m: 0 });
+  const [parts, setParts] = useState({ d: 0, h: 0, m: 0, s: 0 });
 
   useEffect(() => {
     const tick = () => {
@@ -18,7 +18,8 @@ export default function Timer() {
       const d = Math.floor(diff / 86_400_000);
       const h = Math.floor((diff % 86_400_000) / 3_600_000);
       const m = Math.floor((diff % 3_600_000) / 60_000);
-      setParts({ d, h, m });
+      const s = Math.floor((diff % 60_000) / 1_000);
+      setParts({ d, h, m, s });
     };
     tick();
     const id = setInterval(tick, 1000);
@@ -30,9 +31,12 @@ export default function Timer() {
       aria-label="Cuenta regresiva hasta el evento"
       className="border-y border-black/10 bg-black/[0.02] py-8 dark:border-white/10 dark:bg-white/[0.03]"
     >
-      <div className="flex justify-center px-6">
+      <div className="flex flex-col items-center justify-center px-6">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-neutral-600 dark:text-neutral-300">
+          Faltan solo:
+        </p>
         <div
-          className="grid max-w-md grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] items-center justify-items-center gap-x-2 gap-y-2"
+          className="grid max-w-md grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)_auto_minmax(0,1fr)] items-center justify-items-center gap-x-2 gap-y-2"
           role="timer"
           aria-live="polite"
           aria-atomic="true"
@@ -58,6 +62,15 @@ export default function Timer() {
           <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
             {pad(parts.m)}
           </span>
+          <span
+            className="font-mono text-2xl text-neutral-400 md:text-3xl dark:text-white"
+            aria-hidden
+          >
+            :
+          </span>
+          <span className="font-mono text-2xl tabular-nums tracking-tight text-neutral-800 md:text-3xl dark:text-neutral-100">
+            {pad(parts.s)}
+          </span>
 
           <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-white">
             días
@@ -69,6 +82,10 @@ export default function Timer() {
           <span aria-hidden className="min-w-0" />
           <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-white">
             minutos
+          </span>
+          <span aria-hidden className="min-w-0" />
+          <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-neutral-500 dark:text-white">
+            segundos
           </span>
         </div>
       </div>

@@ -25,12 +25,12 @@ export default function PassCard({
         "rounded-2xl border bg-white p-6 shadow-sm transition-all duration-200",
         isLarge ? "md:scale-105 md:p-8" : "md:p-6",
         featured
-          ? "border-red-500 shadow-red-300 md:shadow-lg"
-          : "border-gray-200 hover:-translate-y-0.5 hover:shadow-md",
+          ? "border-highlight-dark shadow-highlight-dark md:shadow-lg"
+          : "border-gray-200 hover:shadow-md",
       ].join(" ")}
     >
       {featured && (
-        <span className="mb-4 inline-block rounded-full bg-red-100 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-red-700">
+        <span className="mb-4 inline-block rounded-full bg-highlight px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
           Más vendido
         </span>
       )}
@@ -38,13 +38,12 @@ export default function PassCard({
       <h3 className={isLarge ? "text-2xl font-bold text-gray-900" : "text-xl font-bold text-gray-900"}>
         {name}
       </h3>
-      <p className="mt-2 text-3xl font-extrabold text-gray-900">{price}</p>
+      <p className="mt-2 text-3xl font-extrabold text-gray-900">₡{price}</p>
       <p className="mt-2 text-sm text-gray-600">{details}</p>
 
-      <ul className="mt-5 space-y-2 text-sm text-gray-700">
+      <ul className="mt-5 pl-6 text-sm text-gray-700">
         {features.map((feature) => (
-          <li key={feature} className="flex items-start gap-2">
-            <span className="mt-0.5 text-indigo-600">✓</span>
+          <li key={feature} className="list-disc marker:text-highlight-dark marker:text-lg items-start tex">
             <span>{feature}</span>
           </li>
         ))}
@@ -54,7 +53,7 @@ export default function PassCard({
         className={[
           "mt-6 w-full rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors",
           featured
-            ? "bg-red-500 text-white hover:bg-red-600"
+            ? "bg-highlight text-white hover:bg-highlight/80"
             : "bg-gray-900 text-white hover:bg-gray-800",
         ].join(" ")}
       >

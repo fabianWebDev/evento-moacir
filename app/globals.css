@@ -6,13 +6,19 @@
 :root {
   --background: #0a0a0a;
   --foreground: #ededed;
+  --highlight: #f95605;
+  --highlight-dark: #d6593a;
+  --secondary: #323238;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-lora: var(--font-lora);
+  --font-inter: var(--font-inter);
+  --color-highlight: var(--highlight);
+  --color-secondary: var(--secondary);
+  --color-highlight-dark: var(--highlight-dark);
 }
 
 html {
@@ -22,5 +28,9 @@ html {
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px #ffffff;
 }

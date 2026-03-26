@@ -10,41 +10,35 @@ export default function AboutSensei() {
                 <div className="mb-8 text-center">
                     <h2
                         id="about-sensei-heading"
-                        className="text-4xl font-bold text-black"
+                        className="relative pl-4 text-5xl font-bold font-lora text-highlight-dark"
                     >
-                        Sobre Moacir Méndez
+                        Moacir Méndez
                     </h2>
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-2 md:items-start md:gap-10 lg:gap-12">
                     <div className="flex justify-center md:justify-start">
                         <Image
-                            src="/moacir.jpg"
+                            src="/moacir.png"
                             alt="Moacir Méndez"
                             width={1000}
                             height={1000}
-                            className="h-auto w-full max-w-md rounded-xl object-cover shadow-md md:max-w-full"
+                            className="h-auto w-full max-w-md  object-cover md:max-w-full"
                             sizes="(min-width: 768px) 45vw, min(28rem, 100vw)"
                         />
                     </div>
 
-                    <div className="space-y-4 text-left text-base leading-relaxed text-black md:min-w-0">
-                        <p>
-                            Moacir Méndez es uno de los referentes del judo y jiu-jitsu a nivel
-                            internacional, con una trayectoria de más de 15 años en la selección
-                            brasileña de judo, donde ingresó a los 17 años y se mantuvo hasta los
-                            32.
-                        </p>
-                        <p>
-                            Especialista en ne-waza (lucha de suelo), fue reconocido como el mejor
-                            del mundo en esta área en 2012, y ha sido entrenador de la selección
-                            brasileña en Juegos Olímpicos como Río 2016, Tokio 2021 y París 2024.
-                        </p>
-                        <p>
-                            Actualmente trabaja con el equipo principal de judo de Sogipa y
-                            colabora con la selección brasileña senior, además de dirigir su
-                            propia academia en Brasil.
-                        </p>
+                    <div className="text-left text-lg leading-relaxed text-black md:min-w-0">
+                        <ul className="list-disc pl-6 marker:text-highlight-dark marker:text-lg space-y-2 uppercase">
+                            <li>Referente <span className="text-highlight-dark font-bold">internacional</span> en judo y jiu-jitsu.</li>
+                            <li>Más de <span className="text-highlight-dark font-bold">15 años</span> en la selección brasileña de judo.</li>
+                            <li><span className="text-highlight-dark font-bold">Especialista</span> en ne-waza (lucha de suelo).</li>
+                            <li>Reconocido como el <span className="text-highlight-dark font-bold">mejor del mundo</span> en ne-waza en 2012.</li>
+                            <li>Entrenador olímpico en <span className="text-highlight-dark font-bold">Río 2016, Tokio 2021 y París 2024</span>.</li>
+                            <li>Actualmente integra el equipo principal de judo de <span className="text-highlight-dark font-bold">Sogipa</span> en Brasil.</li>
+                            <li>Colabora con la selección brasileña <span className="text-highlight-dark font-bold">senior</span>.</li>
+                            <li>Dirige su propia academia en <span className="text-highlight-dark font-bold">Brasil</span>.</li>
+                        </ul>
                     </div>
                 </div>
 

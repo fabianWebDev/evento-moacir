@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const links = [
@@ -17,13 +18,31 @@ export default function NavBar() {
   return (
     <nav className="bg-white shadow-md text-black">
       <div className="mx-auto max-w-6xl px-4 py-4">
-        <div className="flex items-center justify-end md:justify-center">
-          <ul className="hidden items-center gap-8 text-lg font-medium md:flex">
+        <div className="flex items-center justify-between gap-4">
+          <a
+            href="#"
+            className="flex shrink-0 items-center gap-2 sm:gap-3"
+            aria-label="Ir al inicio"
+          >
+            <Image
+              src="/graphs-01.png"
+              alt="Logo Seminario Tamo Junto"
+              width={150}
+              height={48}
+              className="h-10 w-auto sm:h-12"
+              priority
+            />
+            <h1 className="text-3xl font-bold leading-none text-highlight-dark sm:text-3xl">
+              TAMO JUNTO!
+            </h1>
+          </a>
+
+          <ul className="hidden flex-1 items-center justify-center gap-8 text-lg font-medium md:flex">
             {links.map(({ href, label }) => (
               <li key={href + label}>
                 <a
                   href={href}
-                  className="transition-colors hover:text-red-500"
+                  className="transition-colors hover:text-highlight"
                 >
                   {label}
                 </a>
@@ -33,7 +52,7 @@ export default function NavBar() {
 
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md p-2 text-black md:hidden"
+            className="inline-flex items-center justify-center rounded-md p-2 text-highlight-dark md:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-controls="mobile-menu"
@@ -50,7 +69,7 @@ export default function NavBar() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
@@ -65,7 +84,7 @@ export default function NavBar() {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
@@ -82,7 +101,7 @@ export default function NavBar() {
               <li key={href + label}>
                 <a
                   href={href}
-                  className="block py-1 transition-colors hover:text-red-500"
+                  className="block py-1 transition-colors hover:text-highlight"
                   onClick={() => setOpen(false)}
                 >
                   {label}
