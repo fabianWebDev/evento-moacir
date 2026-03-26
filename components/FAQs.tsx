@@ -12,6 +12,10 @@ const faqItems = [
     answer: "El seminario está diseñado para todos los niveles. Moacir Méndez es experto en enseñar a principiantes y a jugadores de alto nivel.",
   },
   {
+    question: "¿Cuales son los horarios del seminario?",
+    answer: "El seminario dura 4 días. Desde el 13 al 15 de Mayo, de 6:00 p.m a 8:30 p.m. El 16 de Mayo, de 8:00 a.m a 12:30 p.m.",
+  },	
+  {
     question: "¿Necesito experiencia en judo?",
     answer: "No. El seminario está diseñado para todos los niveles. Moacir Méndez es experto en enseñar a principiantes y a jugadores de alto nivel.",
   },
