@@ -16,7 +16,7 @@ export default function Hero() {
                 <h2 className="text-left text-sm sm:text-xl md:text-xl lg:text-3xl">Judo San Pedro, San José, Costa Rica</h2>
                 <h2 className="text-left text-sm sm:text-xl md:text-xl lg:text-3xl">13 de Mayo de 2026</h2>
                 <button className="mt-2 rounded-md bg-highlight px-4 py-2 text-sm font-bold text-white sm:text-base md:mt-4 md:text-lg">
-                    <a href="#pases-y-entradas">Comprar entrada</a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor" target="_blank">Reservar mi cupo</a>
                 </button>
             </div>
         </section>

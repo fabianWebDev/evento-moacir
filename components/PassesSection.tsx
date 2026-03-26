@@ -26,7 +26,7 @@ export default function PassesSection() {
     <div className="bg-secondary w-full">
       <section className="mx-auto max-w-6xl px-6 py-14" id="pases-y-entradas">
         <div className="mb-8 text-center">
-          <h2 className="text-4xl font-bold text-white font-lora">Pases y Entradas</h2>
+          <h2 className="text-4xl font-bold text-white font-lora">Reserva tu lugar</h2>
           <p className="mt-2 text-white">Elige el pase que se ajuste a tu experiencia.</p>
         </div>
 

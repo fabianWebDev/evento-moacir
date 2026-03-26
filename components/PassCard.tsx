@@ -57,7 +57,7 @@ export default function PassCard({
             : "bg-gray-900 text-white hover:bg-gray-800",
         ].join(" ")}
       >
-        {ctaLabel}
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor" target="_blank">Reservar mi cupo</a>
       </button>
     </article>
   );

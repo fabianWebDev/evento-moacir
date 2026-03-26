@@ -5,6 +5,7 @@ import PassesSection from "@/components/PassesSection";
 import Timer from "@/components/Timer";
 import FAQs from "@/components/FAQs";
 import MapWidget from "@/components/MapWidget";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <PassesSection />
       <FAQs />
       <MapWidget />
+      <Footer />
     </div>
   );
 }
