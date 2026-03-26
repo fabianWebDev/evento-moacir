@@ -2,7 +2,7 @@ import PassCard from "@/components/PassCard";
 
 const packages = [
   {
-    name: "Preventa",
+    name: "Preventa (Cupo limitado)",
     price: "37.500",
     details: "Entrada al seminario",
     features: ["Entrada al seminario", "Acceso a todas las actividades"],
@@ -11,7 +11,7 @@ const packages = [
     size: "large" as const,
   },
   {
-    name: "General",
+    name: "Entrada General",
     price: "49.900",
     details: "Entrada al seminario",
     features: ["Entrada al seminario", "Acceso a todas las actividades"],

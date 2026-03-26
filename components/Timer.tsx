@@ -88,6 +88,10 @@ export default function Timer() {
             segundos
           </span>
         </div>
+
+        <p className="mt-4 text-center text-xs text-neutral-700 dark:text-neutral-200">
+          No te quedes sin tu espacio!
+        </p>
       </div>
     </section>
   );
