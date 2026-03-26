@@ -49,16 +49,19 @@ export default function PassCard({
         ))}
       </ul>
 
-      <button
+      <a
         className={[
-          "mt-6 w-full rounded-lg px-4 py-2.5 text-sm font-semibold transition-colors",
+          "mt-6 block w-full rounded-lg px-4 py-2.5 text-center text-sm font-semibold transition-colors",
           featured
             ? "bg-highlight text-white hover:bg-highlight/80"
             : "bg-gray-900 text-white hover:bg-gray-800",
         ].join(" ")}
+        href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor"
+        target="_blank"
+        rel="noreferrer"
       >
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor" target="_blank">Reservar mi cupo</a>
-      </button>
+        {ctaLabel}
+      </a>
     </article>
   );
 }

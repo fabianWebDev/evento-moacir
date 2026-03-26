@@ -15,9 +15,14 @@ export default function Hero() {
                 <hr className="mb-2 mt-2 w-40 md:w-80 md:mb-4 md:mt-4 border-t-2 border-current" />
                 <h2 className="text-left text-sm sm:text-xl md:text-xl lg:text-3xl">Judo San Pedro, San José, Costa Rica</h2>
                 <h2 className="text-left text-sm sm:text-xl md:text-xl lg:text-3xl">13 de Mayo de 2026</h2>
-                <button className="mt-2 rounded-md bg-highlight px-4 py-2 text-sm font-bold text-white sm:text-base md:mt-4 md:text-lg">
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor" target="_blank">Reservar mi cupo</a>
-                </button>
+                <a
+                  className="mt-2 inline-block rounded-md bg-highlight px-4 py-2 text-sm font-bold text-white sm:text-base md:mt-4 md:text-lg"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Reservar mi cupo
+                </a>
             </div>
         </section>
     );

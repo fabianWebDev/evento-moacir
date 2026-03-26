@@ -41,9 +41,13 @@ export default function AboutSensei() {
                         </ul>
                     </div>
                     <div className="md:col-span-2 flex justify-center">
-                        <button className="mt-2 rounded-md bg-highlight px-4 py-2 text-sm font-bold text-white sm:text-base md:mt-4 md:text-lg">
-                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor" target="_blank">Reservar mi cupo</a>
-                        </button>
+                        <a className="mt-2 inline-block rounded-md bg-highlight px-4 py-2 text-center text-sm font-bold text-white sm:text-base md:mt-4 md:text-lg"
+                          href="https://docs.google.com/forms/d/e/1FAIpQLScmogv5bI8x2hAUgIWOuEj-FXsUNJMEOkEp1EpcKPk0W7KMuQ/viewform?usp=publish-editor"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                            Reservar mi cupo
+                        </a>
                     </div>
                 </div>
 
