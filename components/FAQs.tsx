@@ -5,19 +5,19 @@ import { useState } from "react";
 const faqItems = [
   {
     question: "¿Qué es el Seminario Tamo Junto?",
-    answer: "El Seminario Tamo Junto es un evento de judo que se realiza en San José, Costa Rica. El seminario está diseñado para todos los niveles y tiene como objetivo brindar una experiencia de aprendizaje única y enriquecedora para todos los participantes. Moacir Méndez, uno de los mejores entrenadores de judo de Brasil, será el instructor principal del seminario.",
+    answer: "El Seminario Tamo Junto es un evento de judo que se realiza en San José, Costa Rica. “Tamo Junto”, que en portugués coloquial significa “estamos juntos”, es una frase muy utilizada por Moacir Méndez y refleja el espíritu de unión, compañerismo y crecimiento conjunto que caracteriza este seminario. Está diseñado para todos los niveles y tiene como objetivo brindar una experiencia de aprendizaje única y enriquecedora para todos los participantes. Moacir Méndez, uno de los mejores entrenadores de judo de Brasil, será el instructor principal del seminario.",
   },
   {
     question: "¿Qué nivel necesito?",
-    answer: "El seminario está diseñado para todos los niveles. Moacir Méndez es experto en enseñar a principiantes y a jugadores de alto nivel.",
+    answer: "El seminario está diseñado para todos los niveles. Moacir Méndez es experto en enseñar a principiantes y a judokas de alto nivel.",
   },
   {
     question: "¿Cuales son los horarios del seminario?",
-    answer: "El seminario dura 4 días. Desde el 13 al 15 de Mayo, de 6:00 p.m a 8:30 p.m. El 16 de Mayo, de 8:00 a.m a 12:30 p.m.",
-  },	
+    answer: "El seminario dura 4 días. Desde el 13 al 15 de Mayo, de 6:00 p.m a 9:00 p.m. El 16 de Mayo, de 8:30 a.m a 12:30 p.m.",
+  },
   {
     question: "¿Necesito experiencia en judo?",
-    answer: "No. El seminario está diseñado para todos los niveles. Moacir Méndez es experto en enseñar a principiantes y a jugadores de alto nivel.",
+    answer: "No. El seminario está diseñado para todos los niveles. Moacir Méndez es experto en enseñar a principiantes y a judokas de alto nivel.",
   },
   {
     question: "¿Qué debo llevar?",
@@ -31,7 +31,7 @@ const faqItems = [
   {
     question: "¿Habrá diferentes niveles entrenando juntos?",
     answer:
-      "Sí, pero las actividades se adaptan para que todos aprovechen. Moacir Méndez es experto en enseñar a principiantes y a jugadores de alto nivel.",
+      "Sí, pero las actividades se adaptan para que todos aprovechen. Moacir Méndez es experto en enseñar a principiantes y a judokas de alto nivel.",
   },
   {
     question: "¿Se puede grabar o tomar fotos?",
