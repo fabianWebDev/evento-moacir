@@ -29,7 +29,7 @@ export default function Timer() {
   return (
     <section
       aria-label="Cuenta regresiva hasta el evento"
-      className="border-y border-black/10 bg-black/[0.02] py-8 dark:border-white/10 dark:bg-white/[0.03]"
+      className="border-y border-highlight-dark/50 py-8"
     >
       <div className="flex flex-col items-center justify-center px-6">
         <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-neutral-600 dark:text-neutral-300">
@@ -89,9 +89,10 @@ export default function Timer() {
           </span>
         </div>
 
-        <p className="mt-4 text-center text-xs text-neutral-700 dark:text-neutral-200">
+        <p className="mt-4 text-xs text-neutral-700 dark:text-neutral-200">
           No te quedes sin tu espacio!
         </p>
+        <p className="text-center text-xs text-neutral-700 dark:text-neutral-200">Precio de preventa hasta el 15 de abril o hasta agotar cupos</p>
       </div>
     </section>
   );

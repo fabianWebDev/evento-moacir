@@ -6,6 +6,7 @@ type PassCardProps = {
   ctaLabel?: string;
   featured?: boolean;
   size?: "regular" | "large";
+  validity?: string;
 };
 
 export default function PassCard({
@@ -16,6 +17,7 @@ export default function PassCard({
   ctaLabel = "Choose package",
   featured = false,
   size = "regular",
+  validity,
 }: PassCardProps) {
   const isLarge = size === "large";
 
@@ -62,6 +64,8 @@ export default function PassCard({
       >
         {ctaLabel}
       </a>
+
+      {validity && <p className="mt-6 text-sm text-gray-950 font-bold">{validity}</p>}
     </article>
   );
 }
